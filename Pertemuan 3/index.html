@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form COMSCIFLIX</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #141414; 
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+        }
+
+        header img {
+            height: 40px; 
+        }
+
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 60px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 450px;
+            margin: auto; 
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 28px;
+            margin-top: 0;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #8c8c8c;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 4px;
+            border: none;
+            background: #333;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            background: #454545;
+            outline: none;
+            border-bottom: 2px solid #e50914; 
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 16px;
+            margin-top: 24px;
+            background-color: #e50914;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f6121d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 style="color: #e50914; margin: 0; font-size: 28px; letter-spacing: -1px;">COMSCIFLIX</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Daftar Sekarang</h2>
+
+        <form action="submit.php" method="post" target="_blank">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="npm">NPM</label>
+                <input type="text" id="npm" name="npm" placeholder="Contoh: 2023001" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kelas">Kelas</label>
+                <select id="kelas" name="kelas">
+                    <option value="" disabled selected>Pilih Kelas</option>
+                    <option value="A">Kelas A</option>
+                    <option value="B">Kelas B</option>
+                </select>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div class="form-group" style="flex: 1;">
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" id="tanggal" name="tanggal">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="waktu">Waktu</label>
+                    <input type="time" id="waktu" name="waktu">
+                </div>
+            </div>
+
+            <input type="submit" value="Simpan Data">
+        </form>
+    </section>
+
+</body>
+</html>
